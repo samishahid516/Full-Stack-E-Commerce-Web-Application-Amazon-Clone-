@@ -36,16 +36,20 @@ If you are a beginner, here is a quick breakdown of the tools used:
 
 ## 📸 Screenshots
 
-*(You can place your project screenshots here! Just replace the placeholder images in the `frontend/public/images` folder)*
-
 ### 1. Home Page (Product Grid)
-![Home Page](frontend/public/images/home_placeholder.png)
+![Home Page](frontend/public/images/homepage.png)
 
 ### 2. Product Detail Page
-![Product Detail](frontend/public/images/product_placeholder.png)
+![Product Detail](frontend/public/images/product%20detail.png)
 
 ### 3. Shopping Cart
-![Shopping Cart](frontend/public/images/cart_placeholder.png)
+![Shopping Cart](frontend/public/images/Cart.png)
+
+### 4. Admin Dashboard
+![Admin Dashboard](frontend/public/images/adminpage.png)
+
+### 5. Add/Edit Product
+![Add Product](frontend/public/images/add%20product.png)
 
 ---
 
