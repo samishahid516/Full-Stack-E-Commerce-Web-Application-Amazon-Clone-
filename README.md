@@ -1,126 +1,93 @@
-# 🛒 ShopEasy — Full-Stack E-Commerce (Lab 13)
+# Full-Stack E-Commerce Web Application (Amazon Clone)
 
-Amazon-clone built with **React + Node.js/Express + MongoDB**
+![MERN Stack](https://img.shields.io/badge/MERN-Stack-blue?style=for-the-badge&logo=mongodb)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-Ready-purple?style=for-the-badge&logo=vite)
 
----
+A premium, fully responsive Full-Stack E-Commerce Web Application built using the MERN stack. Designed with an ultra-modern, glassmorphism-inspired UI, this project offers a smooth shopping experience with a fully functional cart, elegant product displays, and dynamic Light/Dark mode themes.
 
-## 📁 Project Structure
+## 📸 Screenshots
 
-```
-ecommerce/
-├── backend/           ← Node.js + Express API
-│   ├── models/        ← Mongoose schemas (Product, User, Order)
-│   ├── routes/        ← REST API routes
-│   ├── middleware/    ← JWT auth & admin middleware
-│   ├── server.js      ← Entry point
-│   ├── seed.js        ← Sample data seeder
-│   └── .env           ← ⚠️ Add your MongoDB URI here
-│
-└── frontend/          ← React + Vite app
-    └── src/
-        ├── components/  ← Navbar, ProductCard, etc.
-        ├── context/     ← AuthContext, CartContext
-        ├── pages/       ← All route pages
-        └── utils/       ← Axios API instance
-```
+*(Replace the paths below with actual screenshots of your application)*
 
----
+### Home Page (Light / Dark Mode)
+![Home Page](frontend/public/images/home_placeholder.png)
 
-## ⚙️ Setup Instructions
+### Product Detail Page
+![Product Detail](frontend/public/images/product_placeholder.png)
 
-### 1. Configure Environment Variables
+### Shopping Cart
+![Shopping Cart](frontend/public/images/cart_placeholder.png)
 
-Open `backend/.env` and fill in your values:
+### Authentication
+![Login Page](frontend/public/images/login_placeholder.png)
 
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/ecommerce   ← Change this
-JWT_SECRET=your_super_secret_key_here           ← Change this
-```
+## ✨ Features
 
-For **MongoDB Atlas**, your URI looks like:
-```
-MONGO_URI=mongodb+srv://<user>:<password>@cluster0.xxxxx.mongodb.net/ecommerce
-```
+- **Premium UI/UX:** Custom CSS variables, smooth transitions, and glassmorphism elements.
+- **Dark & Light Mode:** Fully integrated and persistent theme toggling.
+- **Fully Responsive:** Adapts seamlessly to mobile, tablet, and desktop screens.
+- **Product Management:** Dynamic grid layouts and beautifully crafted product detail pages.
+- **Shopping Cart:** Real-time state management using React Context API with animated toast notifications on adding items.
+- **Authentication:** Secure user login and registration flows.
 
----
+## 🛠️ Tech Stack
 
-### 2. Install & Run Backend
+- **Frontend:** React.js, Vite, CSS3, React Router
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB, Mongoose
+- **State Management:** React Context API
 
-```bash
-cd backend
-npm install
-npm run seed      # Seeds 12 products + admin + customer
-npm run dev       # Starts on http://localhost:5000
-```
+## 🚀 Getting Started
 
----
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-### 3. Install & Run Frontend
+### Prerequisites
 
-```bash
-cd frontend
-npm install
-npm run dev       # Starts on http://localhost:3000
-```
+- [Node.js](https://nodejs.org/) installed
+- [MongoDB](https://www.mongodb.com/) installed or an Atlas URI
 
----
+### Installation
 
-## 🔑 Demo Credentials (after seeding)
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/samishahid516/Full-Stack-E-Commerce-Web-Application-Amazon-Clone-.git
+   cd Full-Stack-E-Commerce-Web-Application-Amazon-Clone-
+   ```
 
-| Role     | Email                  | Password     |
-|----------|------------------------|--------------|
-| Admin    | admin@shop.com         | admin123     |
-| Customer | john@example.com       | customer123  |
+2. **Install Backend Dependencies:**
+   ```bash
+   cd backend
+   npm install
+   ```
 
----
+3. **Install Frontend Dependencies:**
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 
-## 🌐 API Endpoints
+4. **Environment Setup:**
+   Create a `.env` file in the `backend` directory and add your MongoDB URI:
+   ```env
+   MONGO_URI=your_mongodb_connection_string
+   PORT=5000
+   JWT_SECRET=your_secret_key
+   ```
 
-### Auth
-| Method | Endpoint           | Description                    |
-|--------|--------------------|--------------------------------|
-| POST   | /api/auth/register | Register new user, returns JWT |
-| POST   | /api/auth/login    | Login, returns JWT             |
-| GET    | /api/auth/me       | Get logged-in user (protected) |
+5. **Seed the Database:**
+   ```bash
+   cd backend
+   node seed.js
+   ```
 
-### Products
-| Method | Endpoint            | Description                         |
-|--------|---------------------|-------------------------------------|
-| GET    | /api/products       | Get all (supports ?search=&category=) |
-| GET    | /api/products/:id   | Get single product                  |
-| POST   | /api/products       | Add product (admin only)            |
-| PUT    | /api/products/:id   | Update product (admin only)         |
-| DELETE | /api/products/:id   | Delete product (admin only)         |
+6. **Run the Application:**
+   Open two terminal windows:
+   - Terminal 1 (Backend): `cd backend && npm start`
+   - Terminal 2 (Frontend): `cd frontend && npm run dev`
 
-### Orders
-| Method | Endpoint        | Description                     |
-|--------|-----------------|---------------------------------|
-| POST   | /api/orders     | Place order (logged-in users)   |
-| GET    | /api/orders/my  | Get my orders (logged-in users) |
-| GET    | /api/orders     | Get all orders (admin only)     |
-| PUT    | /api/orders/:id | Update order status (admin only)|
+Open `http://localhost:3000` to view it in the browser!
 
 ---
 
-## 🧪 Testing with Postman
-
-1. **Register or Login** → copy the `token` from response
-2. Set header: `Authorization: Bearer <your_token>`
-3. Test protected endpoints
-
----
-
-## ✅ Features Implemented
-
-- [x] Product listing with search & category filter
-- [x] Product detail page with stock indicator
-- [x] Shopping cart (persisted in localStorage)
-- [x] User registration & login (JWT)
-- [x] Protected routes (customer & admin)
-- [x] Order placement with stock decrement
-- [x] Order history page
-- [x] Admin dashboard — manage products
-- [x] Admin add/edit/delete products
-- [x] Password hashing with bcrypt
-- [x] Role-based access control (customer/admin)
+**Developed by Muhammad Sami**
