@@ -37,19 +37,19 @@ If you are a beginner, here is a quick breakdown of the tools used:
 ## 📸 Screenshots
 
 ### 1. Home Page (Product Grid)
-![Home Page]("C:\Users\Sami\Desktop\ecommerce-lab13\ecommerce\frontend\public\images\homepage.png")
+<img src="frontend/public/images/homepage.png" width="800" alt="Home Page" />
 
 ### 2. Product Detail Page
-![Product Detail]("C:\Users\Sami\Desktop\ecommerce-lab13\ecommerce\frontend\public\images\product detail.png")
+<img src="frontend/public/images/product%20detail.png" width="800" alt="Product Detail Page" />
 
 ### 3. Shopping Cart
-![Shopping Cart]("C:\Users\Sami\Desktop\ecommerce-lab13\ecommerce\frontend\public\images\Cart.png")
+<img src="frontend/public/images/Cart.png" width="800" alt="Shopping Cart" />
 
 ### 4. Admin Dashboard
-![Admin Dashboard]("C:\Users\Sami\Desktop\ecommerce-lab13\ecommerce\frontend\public\images\adminpage.png")
+<img src="frontend/public/images/adminpage.png" width="800" alt="Admin Dashboard" />
 
 ### 5. Add/Edit Product
-![Add Product]("C:\Users\Sami\Desktop\ecommerce-lab13\ecommerce\frontend\public\images\add product.png")
+<img src="frontend/public/images/add%20product.png" width="800" alt="Add Product" />
 
 ---
 
