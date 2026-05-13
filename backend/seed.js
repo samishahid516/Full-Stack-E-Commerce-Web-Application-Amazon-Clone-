@@ -122,16 +122,15 @@ const seedDB = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log('✅ Connected to MongoDB');
 
-    // Clear existing data
+    // Clear existing product data
     await Product.deleteMany({});
-    await User.deleteMany({});
-    console.log('🗑️  Cleared existing data');
+    console.log('🗑️  Cleared existing products');
 
     // Insert products
     await Product.insertMany(products);
     console.log(`✅ Inserted ${products.length} products`);
 
-  
+
   }
     catch (error) {
     console.error('❌ Error seeding database:', error);
